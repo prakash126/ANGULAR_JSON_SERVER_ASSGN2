@@ -1,0 +1,50 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fname": "Prakash",
+      "lname": "Singh",
+      "email": "pk@k.com",
+      "phone": 8765432190,
+      "location": "Patna",
+      "password": "admin"
+    },
+    {
+      "id": 2,
+      "fname": "Sumit",
+      "lname": "Singh",
+      "email": "sk@k.com",
+      "phone": 8765432190,
+      "location": "Patna",
+      "password": "admin"
+    },
+    {
+      "id": 3,
+      "fname": "Rajan",
+      "lname": "Singh",
+      "email": "rk@k.com",
+      "phone": 8765432190,
+      "location": "Patna",
+      "password": "admin"
+    },
+    {
+      "id": 4,
+      "fname": "Gyan",
+      "lname": "Prakash",
+      "email": "gy@p.com",
+      "phone": 8765432190,
+      "location": "Patna",
+      "password": "admin"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

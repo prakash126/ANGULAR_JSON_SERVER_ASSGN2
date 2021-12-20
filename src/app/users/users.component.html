@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row my-2">
+        <div class="col-lg-3">
+            <input type="text" placeholder="search by id" name="id"  id="" [(ngModel)]="uID" class="form-control" (keyup)="searchUserByID()">
+        </div>
+        <div class="col-lg-2">
+            <!-- <button class="btn btn-info px-3 mx-1" (click)="searchUserByID()">SearchByID</button> -->
+        </div>
+        <div class="col-lg-3">
+            <input type="text" placeholder="search by name" name="id" [(ngModel)]="uName"  id="" class="form-control" (keyup)="searchUserByName()">
+        </div>
+        <div class="col-lg-2">
+            <!-- <button class="btn btn-info px-3 mx-1" (click)="searchUserByName()">SearchByName</button> -->
+        </div>
+        <div class="col-lg-2">
+            <button class="btn btn-warning" (click)="clearField()">Clear</button>
+        </div>
+    </div>
+    <hr>
+    <!-- <h1 class="text-center text-info bg-primary">User Details</h1> -->
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+                <th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let user of userArr;let i = index">
+                <tr>
+                    <td>{{user.id}}</td>
+                    <td>{{user.fname}}</td>
+                    <td>{{user.lname}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.phone}}</td>
+                    <td>{{user.location}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button></td>
+                </tr>
+                
+            </ng-container>
+           
+            
+        </tbody>
+    </table>
+    <ng-container>
+        <div *ngIf="isUserNotFound">
+            <h2 class="text-center text-danger fst-italic">No User Found</h2>
+        </div>
+    </ng-container>
+
+
+   
+</div>

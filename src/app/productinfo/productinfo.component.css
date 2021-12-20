@@ -1,0 +1,8 @@
+img {
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+img:hover {
+  width: 400px;
+  height: 480px;
+  transform: rotate(2deg);
+}
